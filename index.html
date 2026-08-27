@@ -1,0 +1,2709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Our Little Raksha Bandhan ✦</title>
+
+<style>
+
+/* =========================================================
+   RAKSHA BANDHAN — SINGLE FILE VERSION
+   HTML + CSS ONLY
+   NO JAVASCRIPT
+   ========================================================= */
+
+/* =========================
+   EASY CUSTOMIZATION
+   ========================= */
+
+:root {
+    --bg: #090506;
+    --bg2: #14090b;
+    --maroon: #4a1018;
+    --maroon-light: #681923;
+    --wine: #7a2632;
+    --burgundy: #5c1822;
+
+    --gold: #d4af68;
+    --gold-soft: #b99858;
+
+    --text: #fff8f0;
+    --soft: #eadfe0;
+    --muted: #b9a7a9;
+
+    --card: rgba(45, 12, 17, .72);
+    --border: rgba(212, 175, 104, .25);
+}
+
+
+/* =========================
+   RESET
+   ========================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background:
+        radial-gradient(
+            circle at 20% 10%,
+            rgba(122,38,50,.22),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 80% 60%,
+            rgba(74,16,24,.25),
+            transparent 30%
+        ),
+        var(--bg);
+
+    color: var(--text);
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+label {
+    font-family: inherit;
+}
+
+img,
+video {
+    max-width: 100%;
+}
+
+
+/* =========================
+   GLOBAL GLOW
+   ========================= */
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(212,175,104,.05),
+            transparent 35%
+        );
+
+    pointer-events: none;
+    z-index: -1;
+}
+
+
+/* =========================
+   PROGRESS DECORATION
+   ========================= */
+
+.top-line {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--maroon),
+            var(--gold),
+            var(--wine)
+        );
+
+    z-index: 999;
+}
+
+
+/* =========================
+   COMMON
+   ========================= */
+
+section {
+    min-height: 100vh;
+    padding: 90px 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+
+.container {
+    width: min(100%, 1050px);
+    margin: auto;
+}
+
+.eyebrow {
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 10px;
+    margin-bottom: 16px;
+}
+
+h1,
+h2,
+h3 {
+    font-family: Georgia, serif;
+}
+
+h1 {
+    font-size: clamp(48px, 14vw, 100px);
+    line-height: .9;
+}
+
+h2 {
+    font-size: clamp(42px, 10vw, 75px);
+    line-height: .95;
+}
+
+p {
+    color: var(--muted);
+    line-height: 1.8;
+}
+
+.gold {
+    color: var(--gold);
+}
+
+
+/* =========================
+   BUTTON
+   ========================= */
+
+.btn {
+    display: inline-block;
+
+    padding: 15px 24px;
+
+    border-radius: 999px;
+
+    border: 1px solid var(--border);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(122,38,50,.65),
+            rgba(212,175,104,.10)
+        );
+
+    color: var(--text);
+
+    cursor: pointer;
+
+    transition: .3s;
+
+    box-shadow:
+        0 0 25px rgba(122,38,50,.15);
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+
+    border-color: var(--gold);
+
+    box-shadow:
+        0 0 35px rgba(212,175,104,.18);
+}
+
+
+/* =========================================================
+   INTRO SCREEN
+   ========================================================= */
+
+#start {
+    position: fixed;
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #3b1018,
+            #090506 65%
+        );
+
+    z-index: 10000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    animation: introFade 1s ease 5s forwards;
+}
+
+.start-content {
+    padding: 25px;
+}
+
+.start-rakhi {
+    width: 110px;
+    height: 110px;
+
+    border-radius: 50%;
+
+    margin: 0 auto 30px;
+
+    border: 4px solid var(--gold);
+
+    display: grid;
+    place-items: center;
+
+    box-shadow:
+        0 0 25px rgba(212,175,104,.35),
+        inset 0 0 30px rgba(122,38,50,.7);
+
+    animation: float 3s ease-in-out infinite;
+}
+
+.start-rakhi::after {
+    content: "✦";
+    font-size: 45px;
+    color: var(--gold);
+}
+
+.start-content h1 {
+    font-size: clamp(40px, 12vw, 80px);
+}
+
+.start-content p {
+    margin: 25px auto;
+    max-width: 500px;
+}
+
+@keyframes introFade {
+    to {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+    }
+}
+
+@keyframes float {
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(122,38,50,.25),
+            transparent 45%
+        );
+}
+
+.hero-rakhi {
+    width: 140px;
+    height: 140px;
+
+    border-radius: 50%;
+
+    margin: auto;
+    margin-bottom: 35px;
+
+    border: 3px solid var(--gold);
+
+    display: grid;
+    place-items: center;
+
+    box-shadow:
+        0 0 25px rgba(212,175,104,.3),
+        0 0 80px rgba(122,38,50,.3);
+
+    animation: float 3s ease-in-out infinite;
+}
+
+.hero-rakhi::before {
+    content: "✦";
+    font-size: 50px;
+    color: var(--gold);
+}
+
+.hero p {
+    max-width: 600px;
+    margin: 25px auto;
+}
+
+
+/* =========================================================
+   CHAPTER TITLE
+   ========================================================= */
+
+.section-head {
+    margin-bottom: 40px;
+}
+
+.section-head p {
+    max-width: 600px;
+    margin-top: 18px;
+}
+
+
+/* =========================================================
+   TIMELINE
+   ========================================================= */
+
+.timeline {
+    position: relative;
+    padding-left: 30px;
+}
+
+.timeline::before {
+    content: "";
+
+    position: absolute;
+
+    left: 8px;
+    top: 0;
+    bottom: 0;
+
+    width: 2px;
+
+    background:
+        linear-gradient(
+            var(--maroon),
+            var(--gold),
+            var(--wine),
+            var(--gold)
+        );
+}
+
+.timeline-item {
+    position: relative;
+
+    margin-bottom: 45px;
+
+    padding: 25px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 24px;
+
+    background: var(--card);
+
+    backdrop-filter: blur(10px);
+
+    transition: .4s;
+}
+
+.timeline-item:hover {
+    transform: translateX(7px);
+
+    border-color: var(--gold);
+
+    box-shadow:
+        0 0 30px rgba(122,38,50,.2);
+}
+
+.timeline-item::before {
+    content: "";
+
+    position: absolute;
+
+    left: -29px;
+    top: 30px;
+
+    width: 14px;
+    height: 14px;
+
+    border-radius: 50%;
+
+    background: var(--gold);
+
+    box-shadow:
+        0 0 15px var(--gold);
+}
+
+.timeline-number {
+    color: var(--gold);
+    font-size: 11px;
+    letter-spacing: 3px;
+    margin-bottom: 8px;
+}
+
+.timeline-item h3 {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+
+/* =========================================================
+   MEMORY GALLERY
+   ========================================================= */
+
+.gallery {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 15px;
+
+    align-items: start;
+}
+
+.photo {
+    position: relative;
+
+    padding: 8px;
+
+    background: #eee7dc;
+
+    border-radius: 4px;
+
+    box-shadow:
+        0 20px 40px rgba(0,0,0,.4);
+
+    transform: rotate(-2deg);
+
+    transition: .4s;
+}
+
+.photo:nth-child(2) {
+    transform: rotate(3deg);
+    margin-top: 35px;
+}
+
+.photo:nth-child(3) {
+    transform: rotate(-4deg);
+    margin-top: -15px;
+}
+
+.photo:nth-child(4) {
+    transform: rotate(2deg);
+    margin-top: 30px;
+}
+
+.photo:nth-child(5) {
+    transform: rotate(-1deg);
+}
+
+.photo:hover {
+    transform:
+        rotate(0deg)
+        translateY(-8px)
+        scale(1.03);
+
+    z-index: 5;
+}
+
+.photo img {
+    width: 100%;
+    aspect-ratio: 4/5;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.caption {
+    color: #302527;
+
+    padding: 10px 5px 5px;
+
+    font-family: Georgia, serif;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   VIDEO
+   ========================================================= */
+
+.video-list {
+    display: grid;
+    gap: 25px;
+}
+
+.video-card {
+    padding: 10px;
+
+    border-radius: 25px;
+
+    background: var(--card);
+
+    border: 1px solid var(--border);
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,.25);
+}
+
+.video-card video {
+    width: 100%;
+
+    border-radius: 18px;
+
+    background: #000;
+
+    display: block;
+}
+
+.video-info {
+    padding: 18px 8px 8px;
+}
+
+.video-info h3 {
+    font-size: 26px;
+    margin-bottom: 5px;
+}
+
+
+/* =========================================================
+   GIFT
+   ========================================================= */
+
+.gift-section {
+    text-align: center;
+}
+
+.gift {
+    width: 150px;
+    height: 120px;
+
+    position: relative;
+
+    margin: 45px auto;
+
+    cursor: pointer;
+
+    animation: giftFloat 2.5s infinite;
+}
+
+.gift-box {
+    position: absolute;
+
+    bottom: 0;
+    left: 10px;
+
+    width: 130px;
+    height: 90px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--maroon),
+            var(--wine)
+        );
+
+    border: 2px solid var(--gold);
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.5);
+}
+
+.gift-box::before {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 18px;
+    height: 100%;
+
+    background: var(--gold);
+}
+
+.gift-lid {
+    position: absolute;
+
+    top: 15px;
+    left: 0;
+
+    width: 150px;
+    height: 30px;
+
+    background: var(--wine);
+
+    border: 2px solid var(--gold);
+
+    z-index: 2;
+
+    transition: .8s;
+}
+
+.gift:hover .gift-lid {
+    transform:
+        translateY(-45px)
+        rotate(-7deg);
+}
+
+.gift-bow {
+    position: absolute;
+
+    top: -2px;
+    left: 50%;
+
+    width: 55px;
+    height: 25px;
+
+    transform: translateX(-50%);
+
+    z-index: 3;
+}
+
+.gift-bow::before,
+.gift-bow::after {
+    content: "";
+
+    position: absolute;
+
+    width: 30px;
+    height: 20px;
+
+    border: 3px solid var(--gold);
+
+    border-radius: 50%;
+}
+
+.gift-bow::before {
+    left: 0;
+}
+
+.gift-bow::after {
+    right: 0;
+}
+
+.gift-message {
+    max-width: 650px;
+
+    margin: 30px auto;
+
+    padding: 25px;
+
+    border-radius: 25px;
+
+    background: var(--card);
+
+    border: 1px solid var(--border);
+
+    opacity: 0;
+
+    transform: translateY(20px);
+
+    transition: .7s;
+}
+
+.gift:focus + .gift-message,
+.gift:hover + .gift-message {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes giftFloat {
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+
+/* =========================================================
+   MINI GAME — CSS ONLY
+   ========================================================= */
+
+.game {
+    text-align: center;
+
+    padding: 30px 20px;
+
+    border-radius: 30px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(74,16,24,.8),
+            rgba(20,9,11,.8)
+        );
+
+    border: 1px solid var(--border);
+}
+
+.game-rakhi {
+    display: inline-block;
+
+    font-size: 40px;
+
+    padding: 15px;
+
+    animation:
+        fall 2.5s infinite linear;
+}
+
+.game-rakhi:nth-child(2) {
+    animation-delay: .7s;
+}
+
+.game-rakhi:nth-child(3) {
+    animation-delay: 1.4s;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(80px);
+        opacity: 0;
+    }
+}
+
+
+/* =========================================================
+   QUIZ
+   ========================================================= */
+
+.quiz-card {
+    padding: 25px;
+
+    margin-bottom: 15px;
+
+    background: var(--card);
+
+    border: 1px solid var(--border);
+
+    border-radius: 22px;
+}
+
+.quiz-card h3 {
+    margin-bottom: 18px;
+
+    font-size: 23px;
+}
+
+.answer {
+    display: block;
+
+    padding: 13px 15px;
+
+    margin-top: 9px;
+
+    border: 1px solid rgba(212,175,104,.15);
+
+    border-radius: 14px;
+
+    color: var(--soft);
+
+    background: rgba(0,0,0,.2);
+
+    transition: .3s;
+
+    cursor: pointer;
+}
+
+.answer:hover {
+    border-color: var(--gold);
+
+    background: rgba(122,38,50,.4);
+}
+
+
+/* =========================================================
+   SECRETS
+   ========================================================= */
+
+.secret-area {
+    text-align: center;
+
+    position: relative;
+
+    min-height: 300px;
+}
+
+.secret {
+    position: absolute;
+
+    font-size: 20px;
+
+    color: var(--gold);
+
+    cursor: pointer;
+
+    text-shadow:
+        0 0 15px var(--gold);
+
+    transition: .3s;
+}
+
+.secret:hover {
+    transform: scale(1.5);
+
+    color: white;
+}
+
+.secret:nth-child(1) {
+    top: 20px;
+    left: 10%;
+}
+
+.secret:nth-child(2) {
+    top: 45%;
+    right: 12%;
+}
+
+.secret:nth-child(3) {
+    bottom: 20px;
+    left: 25%;
+}
+
+.secret:nth-child(4) {
+    top: 15%;
+    right: 35%;
+}
+
+.secret:nth-child(5) {
+    bottom: 30%;
+    right: 45%;
+}
+
+
+/* =========================================================
+   LETTER
+   ========================================================= */
+
+.letter-wrap {
+    display: flex;
+
+    justify-content: center;
+}
+
+.letter {
+    width: 100%;
+    max-width: 650px;
+
+    padding: 35px 25px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #321016,
+            #1a080c
+        );
+
+    border: 1px solid var(--gold-soft);
+
+    border-radius: 5px;
+
+    box-shadow:
+        0 25px 70px rgba(0,0,0,.5);
+
+    transform: rotate(-1deg);
+
+    position: relative;
+}
+
+.letter::before {
+    content: "✦";
+
+    position: absolute;
+
+    top: 15px;
+    right: 20px;
+
+    color: var(--gold);
+}
+
+.letter h3 {
+    font-size: 35px;
+
+    color: var(--gold);
+
+    margin-bottom: 20px;
+}
+
+.letter p {
+    color: var(--soft);
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================================================
+   CHAOS CARDS
+   ========================================================= */
+
+.chaos-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 12px;
+}
+
+.chaos-card {
+    min-height: 150px;
+
+    padding: 22px;
+
+    border-radius: 20px;
+
+    background: var(--card);
+
+    border: 1px solid var(--border);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    position: relative;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    transition: .4s;
+}
+
+.chaos-card:hover {
+    transform: rotate(-2deg) scale(1.03);
+
+    border-color: var(--gold);
+}
+
+.chaos-answer {
+    position: absolute;
+
+    inset: 0;
+
+    padding: 20px;
+
+    display: grid;
+
+    place-items: center;
+
+    background:
+        rgba(74,16,24,.96);
+
+    color: var(--gold);
+
+    font-family: Georgia, serif;
+
+    opacity: 0;
+
+    transition: .4s;
+}
+
+.chaos-card:hover .chaos-answer {
+    opacity: 1;
+}
+
+
+/* =========================================================
+   RAKHI MOMENT
+   ========================================================= */
+
+.rakhi-section {
+    text-align: center;
+
+    overflow: hidden;
+}
+
+.rakhi {
+    width: 180px;
+    height: 180px;
+
+    border-radius: 50%;
+
+    margin: 45px auto;
+
+    position: relative;
+
+    display: grid;
+
+    place-items: center;
+
+    border:
+        5px double var(--gold);
+
+    background:
+        radial-gradient(
+            circle,
+            var(--gold),
+            var(--wine) 45%,
+            var(--maroon) 70%
+        );
+
+    box-shadow:
+        0 0 35px rgba(212,175,104,.3),
+        0 0 100px rgba(122,38,50,.35);
+
+    animation: float 3s infinite ease-in-out;
+}
+
+.rakhi::before {
+    content: "✦";
+
+    font-size: 65px;
+
+    color: #fff3cf;
+}
+
+.thread {
+    position: absolute;
+
+    left: -100vw;
+    right: -100vw;
+
+    height: 6px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--wine),
+            var(--gold),
+            var(--wine),
+            transparent
+        );
+
+    z-index: -1;
+}
+
+
+/* =========================================================
+   FINAL PASSWORD — CSS ONLY
+   ========================================================= */
+
+.final {
+    text-align: center;
+}
+
+.final-box {
+    max-width: 650px;
+
+    margin: auto;
+
+    padding: 40px 25px;
+
+    border-radius: 30px;
+
+    border: 1px solid var(--border);
+
+    background: var(--card);
+}
+
+.secret-input {
+    display: block;
+
+    width: 100%;
+
+    max-width: 350px;
+
+    margin: 25px auto;
+
+    padding: 15px;
+
+    text-align: center;
+
+    border-radius: 999px;
+
+    border: 1px solid var(--border);
+
+    background: #090506;
+
+    color: white;
+
+    outline: none;
+}
+
+.secret-input:focus {
+    border-color: var(--gold);
+}
+
+
+/* =========================================================
+   FINAL REVEAL
+   ========================================================= */
+
+.final-message {
+    margin-top: 50px;
+
+    padding: 40px 20px;
+
+    border-radius: 30px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(122,38,50,.4),
+            transparent 70%
+        );
+
+    border: 1px solid var(--border);
+
+    animation: finalGlow 3s infinite alternate;
+}
+
+.final-heart {
+    font-size: 70px;
+
+    animation: heartbeat 1.5s infinite;
+}
+
+.final-message h2 {
+    color: var(--gold);
+}
+
+.final-message p {
+    max-width: 550px;
+
+    margin: 20px auto;
+
+    color: var(--soft);
+}
+
+.signature {
+    font-family: Georgia, serif;
+
+    font-size: 25px;
+
+    color: var(--gold);
+}
+
+@keyframes heartbeat {
+    50% {
+        transform: scale(1.12);
+    }
+}
+
+@keyframes finalGlow {
+    from {
+        box-shadow: 0 0 10px rgba(122,38,50,.1);
+    }
+
+    to {
+        box-shadow: 0 0 50px rgba(122,38,50,.25);
+    }
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+    padding: 40px 20px;
+
+    text-align: center;
+
+    border-top: 1px solid rgba(212,175,104,.1);
+
+    color: var(--muted);
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   DESKTOP
+   ========================================================= */
+
+@media (min-width: 700px) {
+
+    section {
+        padding: 120px 40px;
+    }
+
+    .gallery {
+        grid-template-columns:
+            repeat(5, 1fr);
+    }
+
+    .video-list {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+    .timeline {
+        padding-left: 70px;
+    }
+
+    .timeline::before {
+        left: 34px;
+    }
+
+    .timeline-item::before {
+        left: -43px;
+    }
+
+    .chaos-grid {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+    section {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .gallery {
+        gap: 8px;
+    }
+
+    .chaos-grid {
+        gap: 8px;
+    }
+
+    .chaos-card {
+        padding: 15px;
+        font-size: 13px;
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
+    }
+
+}
+
+
+/* =========================================================
+   PLAYABLE RAKHI GAME
+   ========================================================= */
+
+.game {
+    text-align: center;
+    padding: 20px;
+    border-radius: 30px;
+    background:
+        linear-gradient(
+            145deg,
+            rgba(74,16,24,.88),
+            rgba(20,9,11,.92)
+        );
+    border: 1px solid var(--border);
+    box-shadow: 0 20px 60px rgba(0,0,0,.28);
+}
+
+.game-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.game-stat {
+    flex: 1;
+    padding: 10px 14px;
+    border: 1px solid rgba(212,175,104,.18);
+    border-radius: 16px;
+    background: rgba(0,0,0,.18);
+}
+
+.game-stat span {
+    display: block;
+    color: var(--muted);
+    font-size: 9px;
+    letter-spacing: 2px;
+    margin-bottom: 3px;
+}
+
+.game-stat strong {
+    color: var(--gold);
+    font-size: 24px;
+}
+
+.game-arena {
+    position: relative;
+    width: 100%;
+    height: 430px;
+    overflow: hidden;
+    border-radius: 22px;
+    border: 1px solid rgba(212,175,104,.2);
+    background:
+        radial-gradient(circle at 50% 20%, rgba(122,38,50,.28), transparent 45%),
+        linear-gradient(180deg, rgba(10,4,6,.45), rgba(35,8,13,.8));
+    touch-action: manipulation;
+}
+
+.game-start-screen,
+.game-result {
+    position: absolute;
+    inset: 0;
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    background: rgba(9,5,6,.78);
+    backdrop-filter: blur(7px);
+}
+
+.game-result {
+    display: none;
+}
+
+.game-big-rakhi {
+    font-size: 70px;
+    margin-bottom: 10px;
+    animation: float 2s ease-in-out infinite;
+}
+
+.game-start-screen h3,
+.game-result h3 {
+    font-family: Georgia, serif;
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.game-start-screen p,
+.game-result p {
+    margin-bottom: 20px;
+}
+
+.game-start-btn {
+    border: 1px solid var(--gold);
+}
+
+.game-target {
+    position: absolute;
+    z-index: 5;
+    width: 58px;
+    height: 58px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    font-size: 42px;
+    line-height: 1;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    animation: rakhiFall var(--fall-time) linear forwards;
+    filter: drop-shadow(0 0 8px rgba(212,175,104,.3));
+}
+
+.game-target:active {
+    transform: scale(.78);
+}
+
+.game-pop {
+    position: absolute;
+    z-index: 10;
+    pointer-events: none;
+    color: var(--gold);
+    font-weight: 700;
+    font-size: 18px;
+    animation: scorePop .55s ease-out forwards;
+}
+
+.game-hint {
+    margin-top: 13px;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+@keyframes rakhiFall {
+    from {
+        transform: translateY(-75px) rotate(-12deg);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(510px) rotate(18deg);
+        opacity: .15;
+    }
+}
+
+@keyframes scorePop {
+    from {
+        transform: translateY(0) scale(.8);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(-45px) scale(1.15);
+        opacity: 0;
+    }
+}
+
+@media (max-width: 420px) {
+    .game-arena {
+        height: 400px;
+    }
+
+    .game-target {
+        width: 52px;
+        height: 52px;
+        font-size: 38px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+<div class="top-line"></div>
+
+
+<!-- =====================================================
+     INTRO
+     ===================================================== -->
+
+<div id="start">
+
+    <div class="start-content">
+
+        <div class="start-rakhi"></div>
+
+        <div class="eyebrow">
+            A LITTLE SOMETHING
+        </div>
+
+        <h1>
+            For you...
+        </h1>
+
+        <p>
+            Don't scroll too fast.<br>
+            There's a surprise waiting.
+        </p>
+
+        <a href="#home" class="btn">
+            START THE JOURNEY ✦
+        </a>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     HERO
+     ===================================================== -->
+
+<section class="hero" id="home">
+
+    <div class="container">
+
+        <div class="hero-rakhi"></div>
+
+        <div class="eyebrow">
+            Raksha Bandhan
+        </div>
+
+        <h1>
+            Our little<br>
+            <span class="gold">story.</span>
+        </h1>
+
+        <p>
+            A collection of memories, chaos, fights,
+            laughs and everything in between.
+        </p>
+
+        <a href="#journey" class="btn">
+            BEGIN ✦
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CHAPTER 01 — JOURNEY
+     ===================================================== -->
+
+<section id="journey">
+
+    <div class="container">
+
+        <div class="section-head">
+
+            <div class="eyebrow">
+                Chapter 01
+            </div>
+
+            <h2>
+                The <span class="gold">Journey.</span>
+            </h2>
+
+            <p>
+                Every bond has a story.
+                Ours is probably more chaotic than most.
+            </p>
+
+        </div>
+
+
+        <div class="timeline">
+
+            <div class="timeline-item">
+
+                <div class="timeline-number">
+                    01 · HOW IT STARTED
+                </div>
+
+                <h3>
+                    Somehow, here we are.
+                </h3>
+
+                <p>
+                    What started as something ordinary
+                    slowly became one of those bonds
+                    that just stays.
+                </p>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-number">
+                    02 · THE CHAOS
+                </div>
+
+                <h3>
+                    Zero peace.
+                </h3>
+
+                <p>
+                    Random arguments, stupid jokes,
+                    annoying each other for absolutely
+                    no reason.
+                </p>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-number">
+                    03 · THE MEMORIES
+                </div>
+
+                <h3>
+                    The moments.
+                </h3>
+
+                <p>
+                    Somehow the random little moments
+                    always become the ones we remember.
+                </p>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-number">
+                    04 · THE FIGHTS
+                </div>
+
+                <h3>
+                    Dramatic much?
+                </h3>
+
+                <p>
+                    We could probably win an award
+                    for arguing over completely
+                    unnecessary things.
+                </p>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-number">
+                    05 · THE LAUGHS
+                </div>
+
+                <h3>
+                    Worth it.
+                </h3>
+
+                <p>
+                    Because after all the chaos,
+                    there are always those moments
+                    where we can't stop laughing.
+                </p>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-number">
+                    06 · STILL US
+                </div>
+
+                <h3>
+                    And that's what matters.
+                </h3>
+
+                <p>
+                    Different days.
+                    Different moods.
+                    Same bond.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CHAPTER 02 — PHOTOS
+     ===================================================== -->
+
+<section id="memories">
+
+    <div class="container">
+
+        <div class="section-head">
+
+            <div class="eyebrow">
+                Chapter 02 · Memories
+            </div>
+
+            <h2>
+                Little moments.<br>
+                <span class="gold">
+                    Big memories.
+                </span>
+            </h2>
+
+            <p>
+                Replace the photos below with your own.
+            </p>
+
+        </div>
+
+
+        <div class="gallery">
+
+
+            <!-- PHOTO 1 -->
+
+            <div class="photo">
+
+                <img
+                    src="https://raw.githubusercontent.com/samxv-tech/happy-birthday-prem-kahike-/refs/heads/main/WhatsApp%20Image%202026-05-30%20at%2011.04.53%20AM.jpeg"
+                    alt="Memory 1">
+
+                <div class="caption">
+                    One of those random memories...
+                </div>
+
+            </div>
+
+
+            <!-- PHOTO 2 -->
+
+            <div class="photo">
+
+                <img
+                    src="https://raw.githubusercontent.com/samxv-tech/happy-birthday-prem-kahike-/refs/heads/main/.github/workflows/WhatsApp%20Image%202026-05-30%20at%2011.04.53%20AM%20(1).jpeg"
+                    alt="Memory 2">
+
+                <div class="caption">
+                    Proof that we actually survived each other.
+                </div>
+
+            </div>
+
+
+            <!-- PHOTO 3 -->
+
+            <div class="photo">
+
+                <img
+                    src="https://raw.githubusercontent.com/samxv-tech/happy-birthday-prem-kahike-/refs/heads/main/.github/workflows/WhatsApp%20Image%202026-05-30%20at%2011.04.54%20AM%20(1).jpeg"
+                    alt="Memory 3">
+
+                <div class="caption">
+                    Okay this one needs an explanation 💀
+                </div>
+
+            </div>
+
+
+            <!-- PHOTO 4 -->
+
+            <div class="photo">
+
+                <img
+                    src="https://raw.githubusercontent.com/samxv-tech/happy-birthday-prem-kahike-/refs/heads/main/.github/workflows/WhatsApp%20Image%202026-05-30%20at%2011.04.54%20AM%20(2).jpeg"
+                    alt="Memory 4">
+
+                <div class="caption">
+                    Still makes me smile.
+                </div>
+
+            </div>
+
+
+            <!-- PHOTO 5 -->
+
+            <div class="photo">
+
+                <img
+                    src="https://raw.githubusercontent.com/samxv-tech/happy-birthday-prem-kahike-/refs/heads/main/.github/workflows/WhatsApp%20Image%202026-05-30%20at%2011.04.55%20AM%20(1).jpeg"
+                    alt="Memory 5">
+
+                <div class="caption">
+                    A memory worth keeping.
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CHAPTER 03 — VIDEOS
+     ===================================================== -->
+
+<section id="videos">
+
+    <div class="container">
+
+        <div class="section-head">
+
+            <div class="eyebrow">
+                Chapter 03 · Moving Memories
+            </div>
+
+            <h2>
+                Some memories<br>
+                <span class="gold">
+                    move.
+                </span>
+            </h2>
+
+        </div>
+
+
+        <div class="video-list">
+
+
+            <div class="video-card">
+
+                <video
+                    controls
+                    playsinline
+                    preload="metadata"
+                    poster="images/photo1.jpg">
+
+                    <source
+                        src="https://github.com/samxv-tech/happy-birthday-prem-kahike-/raw/refs/heads/main/fotoplay20260530112226.mp4"
+                        type="video/mp4">
+
+                </video>
+
+                <div class="video-info">
+
+                    <h3>
+                        Memory #01
+                    </h3>
+
+                    <p>
+                        Okay... this one is best.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="video-card">
+
+                <video
+                    controls
+                    playsinline
+                    preload="metadata"
+                    poster="images/photo2.jpg">
+
+                    <source
+                        src="https://github.com/samxv-tech/happy-birthday-prem-kahike-/raw/refs/heads/main/lv_7308346463799528705_20260513110049.mp4"
+                        type="video/mp4">
+
+                </video>
+
+                <div class="video-info">
+
+                    <h3>
+                        Memory #02
+                    </h3>
+
+                    <p>
+                        This memory deserves its own chapter.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="video-card">
+
+                <video
+                    controls
+                    playsinline
+                    preload="metadata"
+                    poster="images/photo3.jpg">
+
+                    <source
+                        src="https://github.com/samxv-tech/happy-birthday-prem-kahike-/raw/refs/heads/main/lv_7598028045810699573_20260513110644.mp4"
+                        type="video/mp4">
+
+                </video>
+
+                <div class="video-info">
+
+                    <h3>
+                        Memory #03
+                    </h3>
+
+                    <p>
+                        Watch till the end 👀
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CHAPTER 04 — GIFT
+     ===================================================== -->
+
+<section class="gift-section" id="gift">
+
+    <div class="container">
+
+        <div class="eyebrow">
+            Chapter 04 · Surprise
+        </div>
+
+        <h2>
+            Something is<br>
+            <span class="gold">
+                hidden here.
+            </span>
+        </h2>
+
+        <p>
+            Hover over the gift.
+        </p>
+
+
+        <div
+            class="gift"
+            tabindex="0">
+
+            <div class="gift-bow"></div>
+
+            <div class="gift-lid"></div>
+
+            <div class="gift-box"></div>
+
+        </div>
+
+
+        <div class="gift-message">
+
+            <h3>
+                Surprise unlocked 🎁
+            </h3>
+
+            <br>
+
+            <p>
+                You're annoying, dramatic,
+                impossible sometimes...
+                but somehow you're still
+                one of my favorite people.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CHAPTER 05 — GAME
+     ===================================================== -->
+
+<section id="game">
+
+    <div class="container">
+
+        <div class="section-head">
+
+            <div class="eyebrow">
+                Chapter 05 · Mini Game
+            </div>
+
+            <h2>
+                Catch the<br>
+                <span class="gold">
+                    Rakhis.
+                </span>
+            </h2>
+
+            <p>
+                Tap the Rakhis before they fall away!
+            </p>
+
+        </div>
+
+        <div class="game">
+
+            <div class="game-top">
+                <div class="game-stat">
+                    <span>CAUGHT</span>
+                    <strong id="gameScore">0</strong>
+                </div>
+
+                <div class="game-stat">
+                    <span>TIME</span>
+                    <strong id="gameTime">20</strong>
+                </div>
+            </div>
+
+            <div class="game-arena" id="gameArena">
+                <div class="game-start-screen" id="gameStartScreen">
+                    <div class="game-big-rakhi">🪢</div>
+                    <h3>Ready? 😸</h3>
+                    <p>Catch as many Rakhis as you can!</p>
+                    <button class="btn game-start-btn" id="startGame" type="button">
+                        START GAME ✦
+                    </button>
+                </div>
+
+                <div class="game-result" id="gameResult">
+                    <div class="game-result-icon">🏆</div>
+                    <h3>Time's up!</h3>
+                    <p>You caught <strong id="finalScore">0</strong> Rakhis!</p>
+                    <button class="btn game-start-btn" id="restartGame" type="button">
+                        PLAY AGAIN ↻
+                    </button>
+                </div>
+            </div>
+
+            <p class="game-hint">
+                👆 Tap a Rakhi to catch it!
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CHAPTER 06 — QUIZ
+     ===================================================== -->
+
+<section id="quiz">
+
+    <div class="container">
+
+        <div class="section-head">
+
+            <div class="eyebrow">
+                Chapter 06 · Sibling Quiz
+            </div>
+
+            <h2>
+                How well do you<br>
+                <span class="gold">
+                    know me?
+                </span>
+            </h2>
+
+        </div>
+
+
+        <div class="quiz-card">
+
+            <h3>
+                Who gets angry first?
+            </h3>
+
+            <div class="answer">
+                Obviously you 💀
+            </div>
+
+            <div class="answer">
+                Me 😭
+            </div>
+
+            <div class="answer">
+                Both of us
+            </div>
+
+        </div>
+
+
+        <div class="quiz-card">
+
+            <h3>
+                Who is more dramatic?
+            </h3>
+
+            <div class="answer">
+                You
+            </div>
+
+            <div class="answer">
+                Me
+            </div>
+
+            <div class="answer">
+                We don't talk about it.
+            </div>
+
+        </div>
+
+
+        <div class="quiz-card">
+
+            <h3>
+                Who starts fights over stupid things?
+            </h3>
+
+            <div class="answer">
+                You 💀
+            </div>
+
+            <div class="answer">
+                Me 😭
+            </div>
+
+            <div class="answer">
+                The universe.
+            </div>
+
+        </div>
+
+
+        <div class="quiz-card">
+
+            <h3>
+                Who steals the food?
+            </h3>
+
+            <div class="answer">
+                Definitely you.
+            </div>
+
+            <div class="answer">
+                Definitely me.
+            </div>
+
+            <div class="answer">
+                We share. Sometimes.
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CHAPTER 07 — SECRETS
+     ===================================================== -->
+
+<section id="secrets">
+
+    <div class="container">
+
+        <div class="section-head">
+
+            <div class="eyebrow">
+                Chapter 07 · Hidden
+            </div>
+
+            <h2>
+                Find the<br>
+                <span class="gold">
+                    secrets.
+                </span>
+            </h2>
+
+            <p>
+                There are tiny surprises hiding
+                around this section.
+                Look carefully 👀
+            </p>
+
+        </div>
+
+
+        <div class="secret-area">
+
+            <div class="secret">
+                ✦
+            </div>
+
+            <div class="secret">
+                ♡
+            </div>
+
+            <div class="secret">
+                ?
+            </div>
+
+            <div class="secret">
+                ✧
+            </div>
+
+            <div class="secret">
+                🪢
+            </div>
+
+        </div>
+
+        <p style="text-align:center;">
+            Secrets hidden: <strong class="gold">5</strong>
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CHAPTER 08 — LETTER
+     ===================================================== -->
+
+<section id="letter">
+
+    <div class="container">
+
+        <div class="section-head">
+
+            <div class="eyebrow">
+                Chapter 08 · The Letter
+            </div>
+
+            <h2>
+                Something I<br>
+                <span class="gold">
+                    don't say.
+                </span>
+            </h2>
+
+        </div>
+
+
+        <div class="letter-wrap">
+
+            <div class="letter">
+
+                <h3>
+                    Dear sibling,
+                </h3>
+
+                <p>
+                    You probably didn't expect
+                    a whole website, did you?
+                </p>
+
+                <p>
+                    Honestly, I don't always say
+                    these things properly.
+                </p>
+
+                <p>
+                    But between all the random
+                    conversations, stupid arguments,
+                    jokes, annoying moments and
+                    complete chaos...
+                </p>
+
+                <p>
+                    there are a lot of memories
+                    that I wouldn't trade.
+                </p>
+
+                <p>
+                    So yeah...
+                    you're stuck with me.
+                    Sorry. No refunds. 😂
+                </p>
+
+                <p>
+                    Happy Raksha Bandhan ❤️
+                </p>
+
+                <p class="gold">
+                    — Your annoying sibling
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CHAPTER 09 — CHAOS
+     ===================================================== -->
+
+<section id="chaos">
+
+    <div class="container">
+
+        <div class="section-head">
+
+            <div class="eyebrow">
+                Chapter 09 · Sibling Chaos
+            </div>
+
+            <h2>
+                Things we<br>
+                <span class="gold">
+                    definitely didn't fight about.
+                </span>
+            </h2>
+
+        </div>
+
+
+        <div class="chaos-grid">
+
+
+            <div class="chaos-card">
+
+                Who gets the better seat?
+
+                <div class="chaos-answer">
+                    Obviously you. Happy now? 😭
+                </div>
+
+            </div>
+
+
+            <div class="chaos-card">
+
+                Who touched whose stuff?
+
+                <div class="chaos-answer">
+                    We are NOT discussing this.
+                </div>
+
+            </div>
+
+
+            <div class="chaos-card">
+
+                Who ate the last snack?
+
+                <div class="chaos-answer">
+                    I have no evidence. 💀
+                </div>
+
+            </div>
+
+
+            <div class="chaos-card">
+
+                Who started the argument?
+
+                <div class="chaos-answer">
+                    You started it.
+                </div>
+
+            </div>
+
+
+            <div class="chaos-card">
+
+                Who is more annoying?
+
+                <div class="chaos-answer">
+                    Next question.
+                </div>
+
+            </div>
+
+
+            <div class="chaos-card">
+
+                Who is actually right?
+
+                <div class="chaos-answer">
+                    Me. Obviously.
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CHAPTER 10 — RAKHI
+     ===================================================== -->
+
+<section class="rakhi-section" id="rakhi">
+
+    <div class="container">
+
+        <div class="eyebrow">
+            Chapter 10 · The Rakhi
+        </div>
+
+        <h2>
+            Different personalities.<br>
+
+            <span class="gold">
+                Same bond.
+            </span>
+        </h2>
+
+        <p>
+            Happy Raksha Bandhan ❤️
+        </p>
+
+
+        <div class="rakhi">
+
+            <div class="thread"></div>
+
+        </div>
+
+
+        <a href="#final" class="btn">
+            TIE THE RAKHI ✦
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CHAPTER 11 — FINAL
+     ===================================================== -->
+
+<section class="final" id="final">
+
+    <div class="container">
+
+        <div class="final-box">
+
+            <div class="eyebrow">
+                Chapter 11 · One Last Thing
+            </div>
+
+            <h2>
+                Wait...
+            </h2>
+
+            <br>
+
+            <p>
+                You reached the end.
+            </p>
+
+            <p>
+                But there's one last thing.
+            </p>
+
+            <br>
+
+            <!--
+                CSS-ONLY VERSION:
+                No password validation is possible
+                without JavaScript.
+            -->
+
+            <input
+                class="secret-input"
+                type="text"
+                placeholder="Secret code...">
+
+            <p>
+                Hint:
+                <span class="gold">
+                    BHAI
+                </span>
+            </p>
+
+        </div>
+
+
+        <div class="final-message">
+
+            <div class="final-heart">
+                ❤️
+            </div>
+
+            <h2>
+                No matter how much we fight...
+            </h2>
+
+            <p>
+                You're still my person.
+            </p>
+
+            <h2>
+                Happy Raksha Bandhan ❤️
+            </h2>
+
+            <p>
+                From your annoying sibling.
+            </p>
+
+            <br>
+
+            <a
+                href="#home"
+                class="btn">
+
+                REPLAY THE JOURNEY ↻
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    Made with chaos, memories & love ✦
+
+</footer>
+
+
+<script>
+/* =========================================================
+   PLAYABLE RAKHI GAME
+   ========================================================= */
+
+(function () {
+    const arena = document.getElementById("gameArena");
+    const scoreEl = document.getElementById("gameScore");
+    const timeEl = document.getElementById("gameTime");
+    const finalScoreEl = document.getElementById("finalScore");
+    const startScreen = document.getElementById("gameStartScreen");
+    const resultScreen = document.getElementById("gameResult");
+    const startButton = document.getElementById("startGame");
+    const restartButton = document.getElementById("restartGame");
+
+    if (!arena || !scoreEl || !timeEl || !startScreen || !resultScreen) return;
+
+    let score = 0;
+    let timeLeft = 20;
+    let timer = null;
+    let spawnTimer = null;
+    let playing = false;
+
+    function clearTargets() {
+        arena.querySelectorAll(".game-target, .game-pop").forEach(function (el) {
+            el.remove();
+        });
+    }
+
+    function updateUI() {
+        scoreEl.textContent = score;
+        timeEl.textContent = timeLeft;
+    }
+
+    function popScore(x, y) {
+        const pop = document.createElement("div");
+        pop.className = "game-pop";
+        pop.textContent = "+1";
+        pop.style.left = x + "px";
+        pop.style.top = y + "px";
+        arena.appendChild(pop);
+
+        setTimeout(function () {
+            pop.remove();
+        }, 600);
+    }
+
+    function spawnRakhi() {
+        if (!playing) return;
+
+        const target = document.createElement("button");
+        target.type = "button";
+        target.className = "game-target";
+        target.textContent = "🪢";
+        target.setAttribute("aria-label", "Catch Rakhi");
+
+        const arenaWidth = arena.clientWidth;
+        const maxLeft = Math.max(0, arenaWidth - 65);
+        target.style.left = Math.random() * maxLeft + "px";
+        target.style.top = "-65px";
+
+        const fallTime = 2.2 + Math.random() * 1.4;
+        target.style.setProperty("--fall-time", fallTime + "s");
+
+        let caught = false;
+
+        target.addEventListener("pointerdown", function (event) {
+            event.preventDefault();
+
+            if (!playing || caught) return;
+            caught = true;
+
+            const rect = arena.getBoundingClientRect();
+            const x = event.clientX - rect.left;
+            const y = event.clientY - rect.top;
+
+            score++;
+            updateUI();
+            popScore(x, y);
+
+            target.remove();
+        });
+
+        target.addEventListener("animationend", function () {
+            target.remove();
+        });
+
+        arena.appendChild(target);
+    }
+
+    function stopGame() {
+        playing = false;
+
+        clearInterval(timer);
+        clearInterval(spawnTimer);
+
+        timer = null;
+        spawnTimer = null;
+
+        clearTargets();
+
+        finalScoreEl.textContent = score;
+        resultScreen.style.display = "flex";
+    }
+
+    function startGame() {
+        clearInterval(timer);
+        clearInterval(spawnTimer);
+        clearTargets();
+
+        score = 0;
+        timeLeft = 20;
+        playing = true;
+
+        updateUI();
+
+        startScreen.style.display = "none";
+        resultScreen.style.display = "none";
+
+        // Spawn immediately, then keep spawning while the game is active.
+        spawnRakhi();
+        spawnTimer = setInterval(spawnRakhi, 650);
+
+        timer = setInterval(function () {
+            timeLeft--;
+            updateUI();
+
+            if (timeLeft <= 0) {
+                stopGame();
+            }
+        }, 1000);
+    }
+
+    startButton.addEventListener("click", startGame);
+    restartButton.addEventListener("click", startGame);
+
+    updateUI();
+})();
+</script>
+
+</body>
+</html>
